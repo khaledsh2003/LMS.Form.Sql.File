@@ -1,0 +1,239 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.From\\LMS.From.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl.file\\LMS.Bl.file.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl.file\\LMS.Bl.file.csproj",
+        "projectName": "LMS.Bl.file",
+        "projectPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl.file\\LMS.Bl.file.csproj",
+        "packagesPath": "C:\\Users\\kshah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl.file\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kshah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.BL.Interface\\LMS.BL.Interface.csproj": {
+                "projectPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.BL.Interface\\LMS.BL.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.BL.Interface\\LMS.BL.Interface.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.BL.Interface\\LMS.BL.Interface.csproj",
+        "projectName": "LMS.BL.Interface",
+        "projectPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.BL.Interface\\LMS.BL.Interface.csproj",
+        "packagesPath": "C:\\Users\\kshah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.BL.Interface\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kshah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl\\LMS.Bl.csproj": {
+                "projectPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl\\LMS.Bl.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl\\LMS.Bl.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl\\LMS.Bl.csproj",
+        "projectName": "LMS.Bl",
+        "projectPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl\\LMS.Bl.csproj",
+        "packagesPath": "C:\\Users\\kshah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kshah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.From\\LMS.From.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.From\\LMS.From.csproj",
+        "projectName": "LMS.From",
+        "projectPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.From\\LMS.From.csproj",
+        "packagesPath": "C:\\Users\\kshah\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.From\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\kshah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl.file\\LMS.Bl.file.csproj": {
+                "projectPath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.Bl.file\\LMS.Bl.file.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WindowsForms": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
