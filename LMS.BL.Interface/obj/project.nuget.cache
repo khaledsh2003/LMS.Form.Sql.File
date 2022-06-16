@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "UZQ2z1JZgGp5FBViHsmUIFKse9mYb+BlQUZlfGPbj9NR4xahCnHwlcwjN/EJZIRUOicgFUZaq3kFYmOAm8DmKw==",
+  "dgSpecHash": "t/QmCV4D4sBBG9TxiOmqYcjHtx26KH91KW2cE9mG3tWPKsQENPWiMEku5vXEIjqG7A1RixX2UBVFu1UZD+ROhQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kshah\\OneDrive\\Desktop\\AMS\\LMS.BL.Interface\\LMS.BL.Interface.csproj",
+  "projectFilePath": "C:\\Users\\kshah\\source\\repos\\LMSapps\\LMS.BL.Interface\\LMS.BL.Interface.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

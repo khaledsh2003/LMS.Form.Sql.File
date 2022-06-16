@@ -3,9 +3,9 @@ namespace LMS.BL.Interface
 {
     public interface IBookManager
     {
-        public int GetBook(string bookname);
+        public int GetBookById(string bookname);
         public List<Books> GetList();
-        public void Create(string name, string author, int copies);
-        public void UpdateBookFile();
+        public Books Create(string name, string author, int copies);
+        public void DecreaseCopies(string bookName);
     }
 }

@@ -9,9 +9,8 @@ namespace LMS.BL.Interface
     public interface IUserManager
     {
         public List<UserInfo> GetList();
-        public int GetUser(string name,string bookName);
+        public int GetUserById(string name, string bookname);
         public void Delete(int id);
-        public void UpdateUserFile();
-        public void Create(string name, string phone, string bookName, string fromDate, string toDate);
+        public UserInfo Create(string name, string phone, string bookName, string fromDate, string toDate);
     }
 }
