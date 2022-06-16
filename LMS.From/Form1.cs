@@ -1,95 +1,109 @@
-using LMS.Bl.file;
+using LMS.Bl.Sql;
 using LMS.BL.Interface;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace LMS.From
 {
     public partial class Form1 : Form
     {
-       
+
         private string _selected;
+        private string _fullSelected;
+
         private string _FromDate;
         private string _ToDate;
-        private IUserManager _userManager;
-        private IBookManager _bookManager;
+        private IUserManagerSql _userManager;
+        private IBookManagerSql _bookManager;
         public int rowIndex;
-        public string rowIndexBook;
+        public int rowIndexBook;
 
 
         public Form1()
         {
             InitializeComponent();
-            _userManager = new UserFileManager();
-            _bookManager = new BookFileManager();
+            _userManager = new UserSqlManager();
+            _bookManager = new BookSqlManager();
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-        }
 
+        }
+        private void AddToCbMenu()
+        {
+            int copies = 0;
+            SqlDataReader reader = _bookManager.GetBooksReader();
+            while (reader.Read())
+            {
+                copies = int.Parse(reader[2].ToString());
+                if (copies > 0)
+                {
+                    cbMenu.Items.Add("ID: " + reader[0] + ", Book name: " + reader[1]);
+
+                }
+            }
+        }
+        private void DeleteFromCbMenu(int bookId)
+        {
+            int copies;
+            int index=0;
+            SqlDataReader reader = _bookManager.GetBooksReader();
+            while (reader.Read())
+            {
+                copies =int.Parse(reader[2].ToString());
+                if (copies==0)
+                {
+                    cbMenu.Items.Remove(_fullSelected);
+
+                }
+            }
+        }
+        private void ReadUsersInForm()
+        {
+            SqlDataAdapter userAdapter = _userManager.GetUsersReader();
+            DataTable userData = new DataTable();
+            userAdapter.Fill(userData);
+            dataGridView1.DataSource = userData;
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             dateTimePicker1.MinDate = DateTime.Now;
             dateTimePicker2.MinDate = DateTime.Now;
-            foreach(var i in _bookManager.GetList())
-            {
-                if (i.Copies != 0)
-                {
-                    cbMenu.Items.Add(i.Name);
-                }
-            }
-            foreach(var i in _userManager.GetList())
-            {
-                dataGridView1.Rows.Add(i.InstantId, i.Name, i.PhoneNum, i.RentBoughtBook, i.FromDate, i.ToDate);
+
+            AddToCbMenu();
+            ReadUsersInForm();
 
 
-            }
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
-        private void AdjustCbMenu(string bookName)
-        {
 
-            bool IsInMenu=cbMenu.Items.Contains(bookName);
-            foreach (var i in _bookManager.GetList())
-            {
-                if (i.Copies == 0 )
-                {
-                    cbMenu.Items.Remove(i.Name);
-             
-                }
-                if (!IsInMenu && i.Copies!=0)
-                {
-                    cbMenu.Items.Add(bookName);
-                    IsInMenu = true;
-                }
-            }
-        }
 
         private void btnRent_Click(object sender, EventArgs e)
         {
-            int id = 0;
-            string name = textBox1.Text;
-            string phone = textBox2.Text;
+            string name, phone;
+            int bookId;
+            bool isBookAval;
+            name = textBox1.Text;
+            phone = textBox2.Text;
+            bookId = _bookManager.GetBookIdByName(_selected);
+            isBookAval = _bookManager.IsBookAval(bookId);
+            if (isBookAval)
+            {
+                _userManager.CreateUser(name, phone, _selected, _FromDate, _ToDate, bookId);
+                DeleteFromCbMenu(bookId);
+                ReadUsersInForm();
 
-            _userManager.Create(name, phone, _selected,_FromDate,_ToDate);
-            
-            _bookManager.DecreaseCopies(_selected);
-
-            id=_userManager.GetUserById(name, _selected);
-           
-
-            dataGridView1.Rows.Add(id, name, phone, _selected,_FromDate,_ToDate);
-
-            AdjustCbMenu(_selected);
-
-
-
-
+            }
+            else
+            {
+                MessageBox.Show("Book not Avaliable");
+            }
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -109,7 +123,7 @@ namespace LMS.From
         {
 
         }
-       
+
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
@@ -143,53 +157,46 @@ namespace LMS.From
         private void cbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             _selected = cbMenu.Text;
+            _fullSelected = _selected;
+            int length = _selected.Length - 18;
+            _selected = _selected.Substring(18, length);
         }
 
-        
+
 
 
         private void btnRemoveRenter_Click(object sender, EventArgs e)
         {
-            int id=0;
-           
-            dataGridView1.Rows.RemoveAt(rowIndex);
-            //find id
-           
-
-            foreach(var i in _userManager.GetList())
-            {
-                if(i.RentBoughtBook == rowIndexBook)
-                {
-                    id=_userManager.GetList().IndexOf(i);
-                }
-            }
-
-            _userManager.Delete(id);
-
-
-            var b = _bookManager.GetList().FirstOrDefault(x => x.Name == rowIndexBook);
-            if (b != null) 
-            {   
-                b.Copies++;
-                _bookManager.DecreaseCopies("");
-            }
-          
-            AdjustCbMenu(rowIndexBook);
-
-
-            dataGridView1.ClearSelection();
+            //FIX ADDING BY TO MENU only
+            int id=_userManager.GetBookIdByUserId(int.Parse(textBox3.Text));
+            string bookName= _bookManager.GetBookNameUserID(id);
+            _userManager.RemoveUserById(int.Parse(textBox3.Text));
+            ReadUsersInForm();
+            cbMenu.Items.Add("ID: " + id + ", Book name: " + bookName);
 
 
         }
 
         private void dataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
-        {
+        {/*
             if (dataGridView1.CurrentRow.Cells["ID"].Value != null)
             {
+                string ID;
                 rowIndex = dataGridView1.CurrentCell.RowIndex;
-                rowIndexBook = dataGridView1.Rows[rowIndex].Cells["RentedBook"].FormattedValue.ToString();
+                ID = dataGridView1.Rows[rowIndex].Cells["ID"].FormattedValue.ToString();
+                rowIndexBook = int.Parse(ID);
             }
-           
+            */
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

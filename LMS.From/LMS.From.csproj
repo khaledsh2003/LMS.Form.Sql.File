@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LMS.Bl.file\LMS.Bl.file.csproj" />
+    <ProjectReference Include="..\LMS.Bl.Sql\LMS.Sql.csproj" />
   </ItemGroup>
 
 </Project>

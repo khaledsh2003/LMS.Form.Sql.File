@@ -30,13 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btnRent = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RentedBook = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +41,9 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.btnRemoveRenter = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,7 +55,6 @@
             this.label1.Size = new System.Drawing.Size(78, 32);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btnRent
             // 
@@ -70,66 +65,6 @@
             this.btnRent.Text = "Rent Book";
             this.btnRent.UseVisualStyleBackColor = true;
             this.btnRent.Click += new System.EventHandler(this.btnRent_Click);
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ID,
-            this.Column2,
-            this.Column3,
-            this.RentedBook,
-            this.Column5,
-            this.Column6});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 189);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.Size = new System.Drawing.Size(1285, 452);
-            this.dataGridView1.TabIndex = 2;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick_1);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // ID
-            // 
-            this.ID.HeaderText = "ID";
-            this.ID.MinimumWidth = 10;
-            this.ID.Name = "ID";
-            this.ID.Width = 200;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Name";
-            this.Column2.MinimumWidth = 10;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 200;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Phone";
-            this.Column3.MinimumWidth = 10;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 200;
-            // 
-            // RentedBook
-            // 
-            this.RentedBook.HeaderText = "Rented Book";
-            this.RentedBook.MinimumWidth = 10;
-            this.RentedBook.Name = "RentedBook";
-            this.RentedBook.Width = 200;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "From";
-            this.Column5.MinimumWidth = 10;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 200;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "To";
-            this.Column6.MinimumWidth = 10;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 200;
             // 
             // textBox1
             // 
@@ -176,9 +111,9 @@
             // 
             this.cbMenu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbMenu.FormattingEnabled = true;
-            this.cbMenu.Location = new System.Drawing.Point(85, 134);
+            this.cbMenu.Location = new System.Drawing.Point(85, 129);
             this.cbMenu.Name = "cbMenu";
-            this.cbMenu.Size = new System.Drawing.Size(242, 40);
+            this.cbMenu.Size = new System.Drawing.Size(326, 40);
             this.cbMenu.TabIndex = 10;
             this.cbMenu.SelectedIndexChanged += new System.EventHandler(this.cbMenu_SelectedIndexChanged);
             this.cbMenu.DropDownStyleChanged += new System.EventHandler(this.comboBox1_DropDownStyleChanged);
@@ -211,7 +146,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(2, 142);
+            this.label3.Location = new System.Drawing.Point(1, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 32);
             this.label3.TabIndex = 14;
@@ -227,11 +162,42 @@
             this.btnRemoveRenter.UseVisualStyleBackColor = true;
             this.btnRemoveRenter.Click += new System.EventHandler(this.btnRemoveRenter_Click);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 189);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 82;
+            this.dataGridView1.RowTemplate.Height = 41;
+            this.dataGridView1.Size = new System.Drawing.Size(1267, 431);
+            this.dataGridView1.TabIndex = 16;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(786, 129);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(200, 39);
+            this.textBox3.TabIndex = 17;
+            this.textBox3.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(451, 132);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(329, 32);
+            this.label6.TabIndex = 18;
+            this.label6.Text = "User ID (for removing renter) ";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1303, 653);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRemoveRenter);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label5);
@@ -243,7 +209,6 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnRent);
             this.Controls.Add(this.label1);
             this.Name = "Form1";
@@ -259,7 +224,6 @@
 
         private Label label1;
         private Button btnRent;
-        private DataGridView dataGridView1;
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label2;
@@ -271,11 +235,8 @@
         private Label label5;
         private Label label3;
         private Button btnRemoveRenter;
-        private DataGridViewTextBoxColumn ID;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn RentedBook;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
+        private DataGridView dataGridView1;
+        private TextBox textBox3;
+        private Label label6;
     }
 }
