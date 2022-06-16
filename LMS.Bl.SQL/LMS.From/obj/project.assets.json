@@ -1,0 +1,129 @@
+{
+  "version": 3,
+  "targets": {
+    "net6.0-windows7.0": {
+      "LMS.Bl/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/LMS.Bl.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LMS.Bl.dll": {}
+        }
+      },
+      "LMS.Bl.file/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "LMS.BL.Interface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LMS.Bl.file.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LMS.Bl.file.dll": {}
+        }
+      },
+      "LMS.BL.Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "LMS.Bl": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LMS.BL.Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LMS.BL.Interface.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LMS.Bl/1.0.0": {
+      "type": "project",
+      "path": "../LMS.Bl/LMS.Bl.csproj",
+      "msbuildProject": "../LMS.Bl/LMS.Bl.csproj"
+    },
+    "LMS.Bl.file/1.0.0": {
+      "type": "project",
+      "path": "../LMS.Bl.file/LMS.Bl.file.csproj",
+      "msbuildProject": "../LMS.Bl.file/LMS.Bl.file.csproj"
+    },
+    "LMS.BL.Interface/1.0.0": {
+      "type": "project",
+      "path": "../LMS.BL.Interface/LMS.BL.Interface.csproj",
+      "msbuildProject": "../LMS.BL.Interface/LMS.BL.Interface.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net6.0-windows7.0": [
+      "LMS.Bl.file >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\kshah\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\kshah\\source\\repos\\LMSformsNew\\LMS.From\\LMS.From.csproj",
+      "projectName": "LMS.From",
+      "projectPath": "C:\\Users\\kshah\\source\\repos\\LMSformsNew\\LMS.From\\LMS.From.csproj",
+      "packagesPath": "C:\\Users\\kshah\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\kshah\\source\\repos\\LMSformsNew\\LMS.From\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\kshah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net6.0-windows7.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "projectReferences": {
+            "C:\\Users\\kshah\\source\\repos\\LMSformsNew\\LMS.Bl.file\\LMS.Bl.file.csproj": {
+              "projectPath": "C:\\Users\\kshah\\source\\repos\\LMSformsNew\\LMS.Bl.file\\LMS.Bl.file.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net6.0-windows7.0": {
+        "targetAlias": "net6.0-windows",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
