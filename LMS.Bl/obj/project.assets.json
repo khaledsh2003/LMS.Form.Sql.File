@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kshah\\source\\repos\\LMSapps\\LMS.Bl\\LMS.Bl.csproj",
+      "projectUniqueName": "C:\\Users\\kshah\\OneDrive\\Documents\\GitHub\\LMSApp\\LMS.Bl\\LMS.Bl.csproj",
       "projectName": "LMS.Bl",
-      "projectPath": "C:\\Users\\kshah\\source\\repos\\LMSapps\\LMS.Bl\\LMS.Bl.csproj",
+      "projectPath": "C:\\Users\\kshah\\OneDrive\\Documents\\GitHub\\LMSApp\\LMS.Bl\\LMS.Bl.csproj",
       "packagesPath": "C:\\Users\\kshah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kshah\\source\\repos\\LMSapps\\LMS.Bl\\obj\\",
+      "outputPath": "C:\\Users\\kshah\\OneDrive\\Documents\\GitHub\\LMSApp\\LMS.Bl\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kshah\\AppData\\Roaming\\NuGet\\NuGet.Config",

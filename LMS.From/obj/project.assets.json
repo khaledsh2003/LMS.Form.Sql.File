@@ -68,11 +68,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kshah\\source\\repos\\LMSapps\\LMS.From\\LMS.From.csproj",
+      "projectUniqueName": "C:\\Users\\kshah\\OneDrive\\Documents\\GitHub\\LMSApp\\LMS.From\\LMS.From.csproj",
       "projectName": "LMS.From",
-      "projectPath": "C:\\Users\\kshah\\source\\repos\\LMSapps\\LMS.From\\LMS.From.csproj",
+      "projectPath": "C:\\Users\\kshah\\OneDrive\\Documents\\GitHub\\LMSApp\\LMS.From\\LMS.From.csproj",
       "packagesPath": "C:\\Users\\kshah\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kshah\\source\\repos\\LMSapps\\LMS.From\\obj\\",
+      "outputPath": "C:\\Users\\kshah\\OneDrive\\Documents\\GitHub\\LMSApp\\LMS.From\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kshah\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -89,8 +89,8 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
-            "C:\\Users\\kshah\\source\\repos\\LMSapps\\LMS.Bl.file\\LMS.Bl.file.csproj": {
-              "projectPath": "C:\\Users\\kshah\\source\\repos\\LMSapps\\LMS.Bl.file\\LMS.Bl.file.csproj"
+            "C:\\Users\\kshah\\OneDrive\\Documents\\GitHub\\LMSApp\\LMS.Bl.file\\LMS.Bl.file.csproj": {
+              "projectPath": "C:\\Users\\kshah\\OneDrive\\Documents\\GitHub\\LMSApp\\LMS.Bl.file\\LMS.Bl.file.csproj"
             }
           }
         }
