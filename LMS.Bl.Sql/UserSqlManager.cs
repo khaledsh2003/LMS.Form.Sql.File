@@ -10,37 +10,55 @@ namespace LMS.Bl.Sql
         private SqlHelper sqlHelper;
         public UserSqlManager()
         {
+            _users = new List<UserInfo>();
             sqlHelper = new SqlHelper();
             SqlHelper.ConnectToDatabase();
+            GetAllUsers();
+
         }
         public List<UserInfo> GetUsersList()
         {
-            string query = "SELECT * FROM Users";
-            SqlDataReader usersData = sqlHelper.ExcuteQuery(query);
-            while (usersData.Read())
-            {
-                _users.Add(new UserInfo(Convert.ToInt32(usersData[0]), usersData[1].ToString(), usersData[2].ToString(), usersData[3].ToString(), usersData[4].ToString(), usersData[5].ToString(), Convert.ToInt32(usersData[6])));
-            }
-            usersData.Close();
             return _users;
+        }
+        public void GetAllUsers()
+        {
+            string Query = "SELECT * FROM Users";
+            SqlDataReader reader = sqlHelper.ExcuteQuery(Query);
+            while (reader.Read())
+            {
+                _users.Add(new UserInfo(Convert.ToInt32(reader[0]), reader[1].ToString(), reader[2].ToString(), reader[3].ToString(), reader[4].ToString(), reader[5].ToString(), Convert.ToInt32(reader[6])));
+            }
+            
         }
         public void RemoveUserById(int id)
         {
             int bookId = GetBookIdByUserId(id);
-            string updatequery = "UPDATE books SET Copies = Copies + 1 WHERE BookID = " + bookId + "";
             string deleteQuery = "DELETE FROM Users WHERE ID='" + id + "'";
-            sqlHelper.ExcuteNoneQuery(updatequery);
             sqlHelper.ExcuteNoneQuery(deleteQuery);
         }
 
-        public void CreateUser(string name, string phone, string bookName, string fromDate, string toDate, int bookId)
+        public UserInfo CreateUser(string name, string phone, string bookName, string fromDate, string toDate, int bookId)
         {
+            UserInfo user = null;
+            int userId = 0;
             string insertQuery = "INSERT INTO Users VALUES('" + name + "','" + phone + "','" + bookName + "','" + fromDate + "','" + toDate + "'," + bookId + ")";
-            string updatequery = "UPDATE books SET Copies = Copies - 1 WHERE BookID = " + bookId + "";
             sqlHelper.ExcuteNoneQuery(insertQuery);
-            sqlHelper.ExcuteNoneQuery(updatequery);
+            userId = GetUserIDByPhoneNum(phone);
+            _users.Add(new UserInfo(userId,name,phone,bookName,fromDate,toDate, bookId));
+            return user;
         }
-        
+        public int GetUserIDByPhoneNum(string phoneNumber)
+        {
+            int userID = 0;
+            string Query = "SELECT ID FROM Users WHERE PhoneNum = '"+phoneNumber+"'";
+            SqlDataReader reader = sqlHelper.ExcuteQuery(Query);
+            while (reader.Read())
+            {
+                userID = int.Parse(reader[0].ToString());
+            }
+            return userID;
+        }
+
         public int GetBookIdByUserId(int id)
         {
             int bookId = -1;
@@ -53,7 +71,6 @@ namespace LMS.Bl.Sql
             return bookId;
         }
        
-        
        
     }
 }

@@ -14,6 +14,14 @@ namespace LMS.BI
         public string RentBoughtBook;
         public string FromDate;
         public string ToDate;
+        private int userId;
+
+        public UserInfo(int userId, string name)
+        {
+            this.userId = userId;
+            Name = name;
+        }
+
         public UserInfo(int Id, string name, string phone, string book, string fromDate, string toDate, int bookID)
         {
             id = Id;

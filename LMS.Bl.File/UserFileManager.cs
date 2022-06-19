@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using LMS.BI;
-using LMS.BL.Interface;
+using LMS.Interface;
 using Microsoft.VisualBasic.FileIO;
 namespace LMS.Bl.file
 {
     public class UserFileManager:IUserManager
     {
         private readonly string path = @"C:\Users\kshah\source\repos\LMSapps\LMS.Bl\renter.csv";
-
         private List<UserInfo> _users;
         public UserFileManager()
         {
@@ -19,19 +18,21 @@ namespace LMS.Bl.file
             _users = Utilities.Instance.ReadUsersFile(path, _users);
             
         }
-        public List<UserInfo> GetList()
+        public List<UserInfo> GetUsersList()
         {
             return _users;
         }
-        public int GetUserById(string name,string bookname)
-        {
-            int id=_users.FindIndex(x=>x.Name==name && x.RentBoughtBook==bookname);
-            return id;
-        }
-        public void Delete(int id)
+        public void RemoveUserById(int id)
         {
             _users.RemoveAt(id);
             UpdateUserFile();
+        }
+        public UserInfo CreateUser(string name, string phone, string bookName, string fromDate, string toDate, int bookId)
+        {
+            UserInfo user= new UserInfo(_users.Count, name, phone, bookName, fromDate, toDate, bookId);
+            _users.Add(user);
+            UpdateUserFile();
+            return user;
         }
         public void UpdateUserFile()
         {
@@ -52,14 +53,6 @@ namespace LMS.Bl.file
                 }
 
             }
-        }
-        public UserInfo Create(string name, string phone, string bookName,string fromDate,string toDate)
-        {
-            UserInfo newUser = new UserInfo(name, phone, bookName, fromDate, toDate);
-            _users.Add(newUser);
-            UpdateUserFile();
-            return newUser;
-
         }
 
     }

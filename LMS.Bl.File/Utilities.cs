@@ -38,7 +38,7 @@ namespace LMS.Bl.file
                 {
                     string[] fields = csvParser.ReadFields();
                     if (fields.Length != 6) { Console.WriteLine("Error occured while reading users info, the rest of the data after is read"); continue; }
-                    _users.Add(new UserInfo(fields[1], fields[2], fields[3], fields[4], fields[5]));
+                    _users.Add(new UserInfo(int.Parse(fields[0]), fields[1], fields[2], fields[3], fields[4], fields[5],int.Parse(fields[6])));
 
                 }
                 return _users;
@@ -57,7 +57,7 @@ namespace LMS.Bl.file
                 while (!csvParser.EndOfData)
                 {
                      fields = csvParser.ReadFields();
-                    _book.Add(new Books(fields[0], fields[1], int.Parse(fields[2])));
+                    _book.Add(new Books(int.Parse(fields[0]), fields[1], fields[2], int.Parse(fields[3])));
                     if (fields[2] == "0") { continue; };
                     
                 }

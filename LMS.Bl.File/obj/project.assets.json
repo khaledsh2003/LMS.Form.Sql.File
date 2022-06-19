@@ -1,11 +1,48 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "LMS.Bl/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/LMS.Bl.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LMS.Bl.dll": {}
+        }
+      },
+      "LMS.Interface/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "LMS.Bl": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LMS.Interface.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LMS.Interface.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "LMS.Bl/1.0.0": {
+      "type": "project",
+      "path": "../LMS.Bl/LMS.Bl.csproj",
+      "msbuildProject": "../LMS.Bl/LMS.Bl.csproj"
+    },
+    "LMS.Interface/1.0.0": {
+      "type": "project",
+      "path": "../LMS.Interface/LMS.Interface.csproj",
+      "msbuildProject": "../LMS.Interface/LMS.Interface.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "LMS.Interface >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ahmed\\.nuget\\packages\\": {}
@@ -33,7 +70,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Interface\\LMS.Interface.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Interface\\LMS.Interface.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

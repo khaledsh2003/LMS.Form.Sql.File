@@ -1,0 +1,17 @@
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\LMS.Bl.Sql.csproj.AssemblyReference.cache
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\LMS.Bl.Sql.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\LMS.Bl.Sql.AssemblyInfoInputs.cache
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\LMS.Bl.Sql.AssemblyInfo.cs
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\LMS.Bl.Sql.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\bin\Debug\net6.0\LMS.Bl.Sql.deps.json
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\bin\Debug\net6.0\LMS.Bl.Sql.dll
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\bin\Debug\net6.0\LMS.Bl.Sql.pdb
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\bin\Debug\net6.0\LMS.Bl.dll
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\bin\Debug\net6.0\LMS.Interface.dll
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\bin\Debug\net6.0\LMS.Interface.pdb
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\bin\Debug\net6.0\LMS.Bl.pdb
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\LMS.Bl.Sql.csproj.CopyComplete
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\LMS.Bl.Sql.dll
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\refint\LMS.Bl.Sql.dll
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\LMS.Bl.Sql.pdb
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.Sql\obj\Debug\net6.0\ref\LMS.Bl.Sql.dll

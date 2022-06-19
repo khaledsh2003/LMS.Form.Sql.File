@@ -21,7 +21,7 @@ namespace LMS.BI
         }
         public void RentBuy(string name, int id, string bookName, string phone, string fromDate,string toDate)
         {
-            _users.Add(new UserInfo(name, phone, bookName,fromDate,toDate ));
+            _users.Add(new UserInfo(id,name, phone, bookName,fromDate,toDate,id ));
             _books[id].Copies--;
         }
         public void RemoveRenter(int id )

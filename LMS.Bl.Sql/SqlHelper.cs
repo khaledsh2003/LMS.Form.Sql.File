@@ -11,7 +11,7 @@ namespace LMS.Bl.Sql
         private static SqlConnection _sqlConnection;
         private SqlCommand _command;
         private SqlDataReader _reader;
-        private static string _connectionString = @"Data Source=DESKTOP-1LF25MG;Initial Catalog=library;Integrated Security=True";
+        private static string _connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=library;Integrated Security=True";
         public static void ConnectToDatabase()
         {
             _sqlConnection = new SqlConnection(_connectionString);
@@ -36,6 +36,7 @@ namespace LMS.Bl.Sql
             _reader = _command.ExecuteReader();
             return _reader;
         }
+        /*
         public SqlDataAdapter ExcuteAllDataQuery(string Query)
         {
             ConnectToDatabase();
@@ -43,5 +44,6 @@ namespace LMS.Bl.Sql
            // SqlDataAdapter _adapter = new SqlDataAdapter(_command);
             //return _adapter;
         }
+        */
     }
 }

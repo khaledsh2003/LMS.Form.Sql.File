@@ -1,0 +1,5 @@
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.File\obj\Debug\net6.0\LMS.Bl.File.csproj.AssemblyReference.cache
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.File\obj\Debug\net6.0\LMS.Bl.File.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.File\obj\Debug\net6.0\LMS.Bl.File.AssemblyInfoInputs.cache
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.File\obj\Debug\net6.0\LMS.Bl.File.AssemblyInfo.cs
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Bl.File\obj\Debug\net6.0\LMS.Bl.File.csproj.CoreCompileInputs.cache
