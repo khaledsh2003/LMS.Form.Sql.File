@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "LMS.Bl/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/LMS.Bl.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LMS.Bl.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "LMS.Bl/1.0.0": {
+      "type": "project",
+      "path": "../LMS.Bl/LMS.Bl.csproj",
+      "msbuildProject": "../LMS.Bl/LMS.Bl.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "LMS.Bl >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\ahmed\\.nuget\\packages\\": {}
@@ -13,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ahmed\\source\\repos\\LMSApp\\LMS.Interface\\LMS.Interface.csproj",
+      "projectUniqueName": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Interface\\LMS.Interface.csproj",
       "projectName": "LMS.Interface",
-      "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSApp\\LMS.Interface\\LMS.Interface.csproj",
+      "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Interface\\LMS.Interface.csproj",
       "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ahmed\\source\\repos\\LMSApp\\LMS.Interface\\obj\\",
+      "outputPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Interface\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -33,7 +52,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl\\LMS.Bl.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl\\LMS.Bl.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

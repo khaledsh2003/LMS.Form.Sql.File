@@ -1,11 +1,15 @@
 ﻿using LMS.BI;
-namespace LMS.BL.Interface
+namespace LMS.Interface
 {
     public interface IBookManager
     {
-        public int GetBookById(string bookname);
-        public List<Books> GetList();
-        public Books Create(string name, string author, int copies);
-        public void DecreaseCopies(string bookName);
+        public int GetBookIdByName(string bookName);
+
+        public List<Books> GetBooksList();
+        public void CreateBook(string name, string author, int copies);
+           
+        public string GetBookNameUserID(int id);
+
+        public bool IsBookAval(int bookId);
     }
 }

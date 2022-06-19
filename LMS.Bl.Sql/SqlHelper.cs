@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-namespace Lms.Managers.SQL.database
+namespace LMS.Bl.Sql
 {
     public class SqlHelper
     {
@@ -40,8 +40,8 @@ namespace Lms.Managers.SQL.database
         {
             ConnectToDatabase();
             _command = new SqlCommand(Query, _sqlConnection);
-            SqlDataAdapter _adapter = new SqlDataAdapter(_command);
-            return _adapter;
+           // SqlDataAdapter _adapter = new SqlDataAdapter(_command);
+            //return _adapter;
         }
     }
 }

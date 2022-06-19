@@ -8,15 +8,14 @@ namespace LMS.BI
 {
     public class Books
     {
-        public static int InstantNum = 0;
-        public int InstantId;
+        
         public string Name;
         public string Publisher;
         public int Copies;
-        public Books(string name, string publisher, int copy)
+        public int Id;
+        public Books(int id,string name, string publisher, int copy)
         {
-            InstantId=InstantNum;
-            InstantNum++;
+            Id = id;
             Name = name;
             Publisher = publisher;
             Copies = copy;

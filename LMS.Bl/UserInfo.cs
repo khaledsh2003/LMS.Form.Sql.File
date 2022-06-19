@@ -7,22 +7,22 @@ namespace LMS.BI
 {
     public class UserInfo
     {
-        public static int InstanNum = 0;
-        public int InstantId;
+        public int id;
+        public int bookID;
         public string Name;
         public string PhoneNum;
         public string RentBoughtBook;
         public string FromDate;
         public string ToDate;
-        public UserInfo(string name, string phone, string book, string fromDate, string toDate)
+        public UserInfo(int Id, string name, string phone, string book, string fromDate, string toDate, int bookID)
         {
-            InstantId = InstanNum;
-            InstanNum++;
+            id = Id;
             Name = name;
             PhoneNum = phone;
             RentBoughtBook = book;
             FromDate = fromDate;
             ToDate = toDate;
+            this.bookID = bookID;
             
         }
 
