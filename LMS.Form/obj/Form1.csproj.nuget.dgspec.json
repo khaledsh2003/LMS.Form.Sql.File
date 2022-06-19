@@ -4,6 +4,64 @@
     "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Form\\Form1.csproj": {}
   },
   "projects": {
+    "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.File\\LMS.Bl.File.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.File\\LMS.Bl.File.csproj",
+        "projectName": "LMS.Bl.File",
+        "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.File\\LMS.Bl.File.csproj",
+        "packagesPath": "C:\\Users\\ahmed\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.File\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ahmed\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Interface\\LMS.Interface.csproj": {
+                "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Interface\\LMS.Interface.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.Sql\\LMS.Bl.Sql.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -146,6 +204,9 @@
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
+              "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.File\\LMS.Bl.File.csproj": {
+                "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.File\\LMS.Bl.File.csproj"
+              },
               "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.Sql\\LMS.Bl.Sql.csproj": {
                 "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.Sql\\LMS.Bl.Sql.csproj"
               },

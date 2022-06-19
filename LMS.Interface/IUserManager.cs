@@ -11,7 +11,7 @@ namespace LMS.Interface
         public List<UserInfo> GetUsersList();
         public void RemoveUserById(int id);
 
-        public void CreateUser(string name, string phone, string bookName, string fromDate, string toDate, int bookId);
+        public UserInfo CreateUser(string name, string phone, string bookName, string fromDate, string toDate, int bookId);
 
 
     }

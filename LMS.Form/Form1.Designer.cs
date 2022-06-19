@@ -1,6 +1,6 @@
-﻿namespace LMS.Form
+﻿namespace LMS.From
 {
-    partial class Form
+    partial class Form1
     {
         /// <summary>
         ///  Required designer variable.

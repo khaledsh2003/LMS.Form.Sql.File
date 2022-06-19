@@ -1,0 +1,15 @@
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\LMS.Interface.csproj.AssemblyReference.cache
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\LMS.Interface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\LMS.Interface.AssemblyInfoInputs.cache
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\LMS.Interface.AssemblyInfo.cs
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\LMS.Interface.csproj.CoreCompileInputs.cache
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\bin\Debug\net6.0\LMS.Interface.deps.json
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\bin\Debug\net6.0\LMS.Interface.dll
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\bin\Debug\net6.0\LMS.Interface.pdb
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\bin\Debug\net6.0\LMS.Bl.dll
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\bin\Debug\net6.0\LMS.Bl.pdb
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\LMS.Interface.csproj.CopyComplete
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\LMS.Interface.dll
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\refint\LMS.Interface.dll
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\LMS.Interface.pdb
+C:\Users\ahmed\source\repos\LMSAppOne\LMS.Interface\obj\Debug\net6.0\ref\LMS.Interface.dll

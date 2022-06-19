@@ -6,10 +6,13 @@ namespace LMS.Interface
         public int GetBookIdByName(string bookName);
 
         public List<Books> GetBooksList();
-        public void CreateBook(string name, string author, int copies);
-           
-        public string GetBookNameUserID(int id);
+        public void CreateBook(int id,string name, string author, int copies);
 
+        public void IncreaseCopies(int bookId);
+
+
+        public void DecreaseCopies(int bookId);
+       
         public bool IsBookAval(int bookId);
     }
 }

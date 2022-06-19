@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LMS.Bl.File\LMS.Bl.File.csproj" />
+    <ProjectReference Include="..\LMS.Bl.Sql\LMS.Bl.Sql.csproj" />
     <ProjectReference Include="..\LMS.Interface\LMS.Interface.csproj" />
   </ItemGroup>
 

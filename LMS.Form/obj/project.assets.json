@@ -141,6 +141,19 @@
           "bin/placeholder/LMS.Bl.dll": {}
         }
       },
+      "LMS.Bl.File/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "LMS.Interface": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/LMS.Bl.File.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LMS.Bl.File.dll": {}
+        }
+      },
       "LMS.Bl.Sql/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -489,6 +502,11 @@
       "path": "../LMS.Bl/LMS.Bl.csproj",
       "msbuildProject": "../LMS.Bl/LMS.Bl.csproj"
     },
+    "LMS.Bl.File/1.0.0": {
+      "type": "project",
+      "path": "../LMS.Bl.File/LMS.Bl.File.csproj",
+      "msbuildProject": "../LMS.Bl.File/LMS.Bl.File.csproj"
+    },
     "LMS.Bl.Sql/1.0.0": {
       "type": "project",
       "path": "../LMS.Bl.Sql/LMS.Bl.Sql.csproj",
@@ -502,6 +520,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "LMS.Bl.File >= 1.0.0",
       "LMS.Bl.Sql >= 1.0.0",
       "LMS.Interface >= 1.0.0"
     ]
@@ -533,6 +552,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+            "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.File\\LMS.Bl.File.csproj": {
+              "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.File\\LMS.Bl.File.csproj"
+            },
             "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.Sql\\LMS.Bl.Sql.csproj": {
               "projectPath": "C:\\Users\\ahmed\\source\\repos\\LMSAppOne\\LMS.Bl.Sql\\LMS.Bl.Sql.csproj"
             },

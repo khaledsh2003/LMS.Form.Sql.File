@@ -1,19 +1,22 @@
 using LMS.Bl.Sql;
 using LMS.Interface;
+using LMS.Bl;
+using LMS.BI;
+using LMS.Bl.file;
+using LMS.Bl.File;
 
-namespace LMS.Form
+namespace LMS.From
 {
-    public partial class Form1 : Form1
+    public partial class Form1 : Form
     {
         private string _selected;
+        private string _fullSelected;
         private string _FromDate;
         private string _ToDate;
         private IUserManager _userManager;
         private IBookManager _bookManager;
         public int rowIndex;
-        public string rowIndexID;
-        public int rowIndexID2;
-        public string bookNameToDelete;
+        public int UserIDToDelete;
 
 
         public Form1()
@@ -57,49 +60,44 @@ namespace LMS.Form
         {
 
         }
-        private void AdjustCbMenu(string bookName)
+        
+        private void DeleteFromCbMenu(int bookId)
         {
-            bool IsInMenu = !cbMenu.Items.Contains(bookName);
-            foreach (var i in _bookManager.GetList())
+            foreach(var i in _bookManager.GetBooksList())
             {
-                if (i.Copies == 0)
+                if (i.Id == bookId)
                 {
-                    cbMenu.Items.Remove(i.Name);
-
-                }
-                if (IsInMenu && i.Copies != 0)
-                {
-                    cbMenu.Items.Add(bookName);
+                    cbMenu.Items.Remove("ID: " + i.Id + ", Book name: " + i.Name);
                 }
             }
         }
-
         private void btnRent_Click(object sender, EventArgs e)
         {
-            int id = 0;
-            int id_2 = 0;
-            string name = textBox1.Text;
-            string phone = textBox2.Text;
-            var list = _bookManager.GetList();
+            string name, phone;
+            int bookId;
+            bool isBookAval;
+            name = textBox1.Text;
+            phone = textBox2.Text;
+            bookId = _bookManager.GetBookIdByName(_selected);
+            isBookAval = _bookManager.IsBookAval(bookId);
+            if (isBookAval)
+            {
+                _userManager.CreateUser(name, phone, _selected, _FromDate, _ToDate, bookId);
+                _bookManager.DecreaseCopies(bookId);
+                DeleteFromCbMenu(bookId);
+                foreach(var i in _userManager.GetUsersList())
+                {
+                    if (i.PhoneNum == phone)
+                    {
+                        dataGridView1.Rows.Add(i.id, i,name, i.PhoneNum, i.RentBoughtBook,i.FromDate, i.ToDate);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Book not Avaliable");
+            }
 
-            _userManager.Create(name, phone, _selected, _FromDate, _ToDate);
-            id = _bookManager.GetBook(_selected);
-            MessageBox.Show(_selected);
-            MessageBox.Show(id.ToString());
-
-            list[id].Copies--;
-            id_2 = _userManager.GetUser(name, _selected);
-
-
-            dataGridView1.Rows.Add(id_2, name, phone, _selected, _FromDate, _ToDate);
-
-            AdjustCbMenu(_selected);
-
-
-
-
-            _userManager.UpdateUserFile();
-            _bookManager.UpdateBookFile();
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -126,9 +124,9 @@ namespace LMS.Form
             {
                 dataGridView1.CurrentRow.Selected = true;
                 rowIndex = dataGridView1.CurrentCell.RowIndex;
-                MessageBox.Show(rowIndex.ToString());
-                rowIndexID = dataGridView1.Rows[rowIndex].Cells["Column1"].FormattedValue.ToString();
-                rowIndexID2 = int.Parse(rowIndexID);
+                UserIDToDelete= int.Parse(dataGridView1.Rows[rowIndex].Cells["Column1"].FormattedValue.ToString());
+                _selected = dataGridView1.Rows[rowIndex].Cells["Column4"].FormattedValue.ToString();
+
             }
 
         }
@@ -165,47 +163,32 @@ namespace LMS.Form
         private void cbMenu_SelectedIndexChanged(object sender, EventArgs e)
         {
             _selected = cbMenu.Text;
+            _fullSelected = _selected;
+            int length = _selected.Length - 18;
+            _selected = _selected.Substring(18, length);
         }
 
         private void btnRemoveRenter_Click(object sender, EventArgs e)
         {
-
-            string bookName = "";
-            dataGridView1.Rows.RemoveAt(rowIndexID2);
-            int id = rowIndexID2;
-
-            //find book name
-            foreach (var i in _userManager.GetList())
+            string IdAndBookName = "";
+            string bookName =_selected;
+            int bookId = 0;
+            _userManager.RemoveUserById(UserIDToDelete);
+            AddUsersToGrid();
+            foreach(var i in _bookManager.GetBooksList())
             {
-                if (i.InstantId == id)
+                if (i.Name == bookName)
                 {
-                    bookNameToDelete = i.RentBoughtBook;
-
+                    bookId = i.Id;
                 }
             }
-
-            _userManager.Delete(id);
-
-
-            var b = _bookManager.GetList().FirstOrDefault(x => x.Name == bookNameToDelete);
-            if (b != null)
+            _bookManager.IncreaseCopies(bookId);
+            IdAndBookName = "ID: " + bookId + ", Book name: " + bookName;
+            if (!cbMenu.Items.Contains(IdAndBookName))
             {
-                bookName = b.Name;
-                MessageBox.Show(bookName);
-                b.Copies++;
-
+                cbMenu.Items.Add(IdAndBookName);
             }
-            AdjustCbMenu(bookName);
-
-
-            _userManager.UpdateUserFile();
-            _bookManager.UpdateBookFile();
-
 
         }
-
-
-
-
     }
 }

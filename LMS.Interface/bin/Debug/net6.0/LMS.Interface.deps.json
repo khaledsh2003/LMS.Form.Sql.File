@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "LMS.Interface/1.0.0": {
+        "dependencies": {
+          "LMS.Bl": "1.0.0"
+        },
+        "runtime": {
+          "LMS.Interface.dll": {}
+        }
+      },
+      "LMS.Bl/1.0.0": {
+        "runtime": {
+          "LMS.Bl.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "LMS.Interface/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "LMS.Bl/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
